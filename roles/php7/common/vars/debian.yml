@@ -1,18 +1,18 @@
 php_role:
   common:
     packages:
-      - php7.1-common
-      - php7.1-cli
-      - php7.1-json
-      - php7.1-xml
-      - php7.1-zip
-      - php7.1-mbstring
-      - php7.1-intl
-      - php7.1-opcache
-      - php7.1-readline
-      - php7.1-soap
-      - php7.1-curl
-      - php7.1-gd
+      - php7.4-common
+      - php7.4-cli
+      - php7.4-json
+      - php7.4-xml
+      - php7.4-zip
+      - php7.4-mbstring
+      - php7.4-intl
+      - php7.4-opcache
+      - php7.4-readline
+      - php7.4-soap
+      - php7.4-curl
+      - php7.4-gd
       - php-imagick
       - php-pear
-      - php7.1-mysql
+      - php7.4-mysql

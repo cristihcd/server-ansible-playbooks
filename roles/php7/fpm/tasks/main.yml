@@ -27,7 +27,7 @@
 #PHP.ini
 - name: removing FPM configuration
   file:
-    path=/etc/php/7.1/fpm/php.ini
+    path=/etc/php/7.4/fpm/php.ini
     state=absent
   register: php_result
   when: ansible_os_family == "Debian"
@@ -37,7 +37,7 @@
 - name: enabling FPM configuration
   file:
     src=/etc/php.ini
-    dest=/etc/php/7.1/fpm/php.ini
+    dest=/etc/php/7.4/fpm/php.ini
     state=link
   when: (ansible_os_family == "Debian") and (php_result|changed)
   tags:
@@ -46,7 +46,7 @@
 #Pool
 - name: removing default pool configuration on Debian/Ubuntu
   file:
-    path=/etc/php/7.1/fpm/pool.d/www.conf
+    path=/etc/php/7.4/fpm/pool.d/www.conf
     state=absent
   when: ansible_os_family == "Debian"
   tags:
@@ -55,7 +55,7 @@
 - name: copying pool's configurations on Debian/Ubuntu
   template: 
     src=pool.d/www.conf.j2 
-    dest=/etc/php/7.1/fpm/pool.d/{{ item.key }}.conf
+    dest=/etc/php/7.4/fpm/pool.d/{{ item.key }}.conf
   with_dict: '{{php_pool}}'
   when: ansible_os_family == "Debian"
   tags:
