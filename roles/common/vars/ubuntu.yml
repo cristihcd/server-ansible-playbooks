@@ -7,3 +7,4 @@ common:
     - unzip
     - software-properties-common 
     - python-software-properties
+    - apt-transport-https

@@ -3,7 +3,7 @@ nginx:
 varnish:
   owner: "{{ service.user }}"
   group: "{{ service.group }}"
-  version: "40"
+  version: "60lts"
   use_default_vcl: true
   default_vcl_template_path: default.vcl.j2
   default_params_path: varnish.params.j2
